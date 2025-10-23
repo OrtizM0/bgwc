@@ -1,0 +1,136 @@
+.contact-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3.125rem;
+    background: var(--blue, #3E5879);
+    width: 14.5rem;
+    height: 4rem;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all .3s ease;
+}
+
+.contact-button:hover{
+    transform: scale(1.1);
+}
+
+.contact-button__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-button__content .contact-button__content-i{
+    color: var(--off-white);
+    font-size: 2.25rem;
+    transition: all .3s ease;
+}
+
+.contact-button__content h2 {
+  color: var(--off-white);
+  font-family: "Roboto";
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 7ch;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: var(--dark-blue);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 500px;
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-header h3{
+    color: var(--off-white);
+    font-family: "Fredoka";
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.modal-header .modal-header-i{
+    font-size: 1.5rem;
+    color: var(--off-white);
+    cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: "Roboto";
+  border-radius: .3125rem;
+  resize: none;
+  background-color: var(--off-white);
+}
+
+input[type="email"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto";
+  border-radius: .3125rem;
+  background-color: var(--off-white);
+}
+
+.submit-btn {
+  padding: 0.5rem 1rem;
+  background: var(--blue, #3E5879);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.thanks {
+  font-size: 2rem;
+  font-family: "Fredoka";
+  font-weight: 600;
+  text-align: center;
+  color: var(--off-white);
+}
+
+@media (max-width: 475px) {
+    .contact-button{
+      width: 12rem;
+    }
+
+    .modal-header h3{
+      font-size: 1rem;
+    }
+
+    .contact-button__content .contact-button__content-i{
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,71 @@
+.winner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+}
+
+.winner h2{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Fredoka";
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.winner__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.winner__info h1{
+    color: var(--off-white);
+    font-family: "Fredoka";
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.winner__info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.winner__info-container--icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.25rem;
+    height: 7.25rem;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+}
+
+.winner__info-container--icon .container--icon-i{
+    color: var(--off-white);
+    font-size: 3.5rem;
+}
+
+.winner__info-container h3{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Fredoka";
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.slot-spin {
+  animation: pulse 0.1s ease-in-out infinite;
+}
+
+@media (max-width: 475px) {
+    .winner h2{
+        font-size: 2rem;
+    }
+}

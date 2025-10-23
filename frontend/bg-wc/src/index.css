@@ -1,0 +1,28 @@
+:root{
+    --blue: #3E5879;
+    --dark-blue: #213555;
+    --bg-gradient: linear-gradient(to right, #1B2A3A, #213555);
+    --beige: #D8C4B6;
+    --off-white: #F5EFE7;
+    --rich-black: #191919;
+    --gray: #696969;
+    --light-gray: #D9D9D9;
+    --red: #FF4848;
+    --green: #27CF32;
+}
+
+.container{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 475px) {
+  html{
+    font-size: 90%;
+  }
+}

@@ -1,0 +1,307 @@
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.game h1{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Fredoka";
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.game__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.5rem;
+}
+
+.game__container-player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.game__container-player h2{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Fredoka";
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.game__container-player--icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.25rem;
+    height: 7.25rem;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+}
+
+.game__container-player--icon .player--icon-i{
+    font-size: 3.5rem;
+    color: var(--off-white);
+}
+
+.game__container-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border-radius: 0.625rem;
+    border: 15px solid var(--off-white, #F5EFE7);
+    background: var(--blue, #3E5879);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 31.25rem;
+    width: 18.75rem;
+}
+
+.game__container-input input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--off-white, #F5EFE7);
+    font-family: "Fredoka";
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    width: 50%;
+}
+
+.game__container-input--icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.game__container-input--icon .input--icon-i{
+    font-size: 7rem;
+    color: var(--off-white);
+}
+
+.game__container-input--icon h6{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.game__container-cards{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+    width: 55rem;
+    margin-bottom: -2rem;
+    scroll-snap-type: x mandatory;
+}
+
+.game__container-cards--card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 0.625rem;
+    border: 10px solid var(--off-white, #F5EFE7);
+    background: var(--blue, #3E5879);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    width: 14rem;
+    height: 23.5rem;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+    z-index: 3;
+    cursor: pointer;
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+}
+
+.game__container-cards--card h2{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Fredoka";
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cards--card-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cards--card-input .card-input-i{
+    font-size: 6rem;
+    color: var(--off-white);
+}
+
+.cards--card-input h6{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.game__container-cards--card.l-outer{
+    transform: translate(-20rem, 6rem);
+    z-index: 1;
+}
+
+.game__container-cards--card.l-inner{
+    transform: translate(-10rem, 3rem);
+    z-index: 2;
+}
+
+.game__container-cards--card.r-inner{
+    transform: translate(10rem, 3rem);
+    z-index: 2;
+}
+
+.game__container-cards--card.r-outer{
+    transform: translate(20rem, 6rem);
+    z-index: 1;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.625rem;
+  pointer-events: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.l-outer .card-overlay,
+.r-outer .card-overlay {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.l-inner .card-overlay,
+.r-inner .card-overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.main .card-overlay {
+  display: none;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  background: var(--off-white);
+  color: var(--blue);
+  font-family: "Fredoka";
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.carousel-btn{
+  all: unset;
+  cursor: pointer;
+  background-color: var(--off-white);
+  color: var(--off-white);
+  border-radius: 0.5rem;
+  border: 2px solid var(--off-white);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-btn:hover {
+  background-color: var(--blue);
+  transform: scale(1.05);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.carousel-controls-i{
+    color: var(--dark-blue);
+    font-size: 2rem;
+}
+
+.ready-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ready-banner .ready-banner-i{
+    color: var(--off-white);
+    font-size: 3.5rem;
+}
+
+.ready-banner h6{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Fredoka";
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ready-banner p{
+    color: var(--off-white, #F5EFE7);
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-10rem) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.game__container-cards--card.main.animate-in {
+  animation: slideInFromTop 0.4s ease-out;
+}
+
+@media (max-width: 475px) {
+    .game h1{
+        font-size: 2rem;
+    }
+
+    .game__container-cards{
+        width: 25rem;
+    }
+}

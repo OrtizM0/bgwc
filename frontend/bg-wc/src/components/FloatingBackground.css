@@ -1,0 +1,45 @@
+.floating-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -100000;
+  pointer-events: none;
+}
+
+.float {
+  position: absolute;
+  opacity: 0.1;
+  mix-blend-mode: lighten;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floatVertical {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-30px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes floatHorizontal {
+  0%   { transform: translateX(0px) rotate(0deg); }
+  50%  { transform: translateX(30px) rotate(-10deg); }
+  100% { transform: translateX(0px) rotate(0deg); }
+}
+
+@keyframes floatDiagonal {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  50%  { transform: translate(-25px, -25px) rotate(15deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.floatVertical {
+  animation-name: floatVertical;
+}
+
+.floatHorizontal {
+  animation-name: floatHorizontal;
+}
+
+.floatDiagonal {
+  animation-name: floatDiagonal;
+}
